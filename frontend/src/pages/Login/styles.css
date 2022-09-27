@@ -1,0 +1,38 @@
+.form {
+    padding-top: 20%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+}
+
+.field {
+    border: none;
+    height: 44px;
+    width: 302px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.field::placeholder {
+    color: black;
+}
+
+.botao {
+    border: none;
+    color: white;
+    background-color: #08AA23;
+    width: 128px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.botao span {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
