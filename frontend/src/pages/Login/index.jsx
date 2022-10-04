@@ -3,10 +3,14 @@ import { MdEast } from 'react-icons/md';
 
 import './styles.css';
 
+function handleSubmit(event) {
+    
+}
+
 const Login = () => {
     return (
         <div className="form">
-            <form className="formulario">
+            <form className="formulario" onSubmit={handleSubmit}>
                 <input id="usuario" className="field" placeholder="Seu nome de usuário" name="usuario" />
 
                 <input id="senha" className="field" placeholder="Sua senha" name="senha" />
