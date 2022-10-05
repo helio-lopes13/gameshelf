@@ -16,8 +16,24 @@ class UsuariosController {
 
     async register (request, response) {
         const {usuario, senha} = request.body;
-        console.log(usuario, senha);
-        return;
+
+        const novoUsuario = {
+            nome_usuario: usuario,
+            senha
+        };
+
+        const trx = await knex.transaction();
+
+        const insertedIds = await trx('usuario').insert(novoUsuario);
+
+        const usuarioId = insertedIds[0];
+
+        await trx.commit();
+        
+        return response.json({
+            id: usuarioId,
+            usuario: novoUsuario.nome_usuario
+        });
     }
 }
 
